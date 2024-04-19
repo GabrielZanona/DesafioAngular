@@ -2,13 +2,13 @@
 
 Como usar o aplicativo:
 1. Adicionar um item ao pedido:
-Clique no botão "Adicionar item ao pedido" para abrir uma janela de preenchimento dos dados do item que será adicionado ao pedido.
-2. Confirmar o pedido:
-Após adicionar todos os itens desejados, clique no botão "Confirmar o pedido".
-O pedido será confirmado e movido para o "Histórico dos Pedidos".
-3. Consultar o Histórico dos Pedidos:
-Para visualizar todos os pedidos anteriores, clique no botão "Histórico dos Pedidos".
-Para retornar à tela de adição de pedidos, clique no botão "Criar um novo pedido".
+  * Clique no botão "Adicionar item ao pedido" para abrir uma janela de preenchimento dos dados do item que será adicionado ao pedido.
+3. Confirmar o pedido:
+  * Após adicionar todos os itens desejados, clique no botão "Confirmar o pedido".
+  * O pedido será confirmado e movido para o "Histórico dos Pedidos".
+4. Consultar o Histórico dos Pedidos:
+  * Para visualizar todos os pedidos anteriores, clique no botão "Histórico dos Pedidos".
+  * Para retornar à tela de adição de pedidos, clique no botão "Criar um novo pedido".
 
 Projeto:
 
