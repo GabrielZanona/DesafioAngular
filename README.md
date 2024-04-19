@@ -6,10 +6,7 @@ Como usar o aplicativo:
 2. Confirmar o pedido:
   * Após adicionar todos os itens desejados, clique no botão "Confirmar o pedido".
   * O pedido será confirmado e movido para o "Histórico dos Pedidos".
-3. Confirmar o pedido:
-  * Após adicionar todos os itens desejados, clique no botão "Confirmar o pedido".
-  * O pedido será confirmado e movido para o "Histórico dos Pedidos".
-4. Consultar o Histórico dos Pedidos:
+3. Consultar o Histórico dos Pedidos:
   * Para visualizar todos os pedidos anteriores, clique no botão "Histórico dos Pedidos".
   * Para retornar à tela de adição de pedidos, clique no botão "Criar um novo pedido".
 
