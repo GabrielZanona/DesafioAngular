@@ -1,0 +1,24 @@
+<button mat-flat-button (click)="navigateToHome()" color="warn" class="new-pedido-btn" >Criar um novo pedido</button>
+
+<div *ngFor="let pedido of pedidos | keyvalue" class="pedido-container">
+
+    <h3 class="pedido-title">{{ pedido.key }}</h3>
+    <table class="pedido-table">
+      <thead>
+        <tr>
+          <th>Nome</th>
+          <th>Quantidade</th>
+          <th>Vegetariano</th>
+          <th>Data do Pedido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of pedido.value">
+          <td>{{ item.nome }}</td>
+          <td>{{ item.quantidade }}</td>
+          <td>{{ item.vegetariano ? 'Sim' : 'Não' }}</td>
+          <td>{{ item.datapedido | date:'dd/MM/yyyy' }}</td>
+        </tr>
+      </tbody>
+    </table>
+</div>
