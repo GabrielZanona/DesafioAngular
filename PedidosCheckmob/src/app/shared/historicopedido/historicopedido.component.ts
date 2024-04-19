@@ -6,8 +6,6 @@ import { PedidoService } from '../../pedido.service';
 import { Router } from '@angular/router';
 import {MatButtonModule} from '@angular/material/button';
 
-
-
 @Component({
   selector: 'app-historicopedido',
   standalone: true,
@@ -15,6 +13,7 @@ import {MatButtonModule} from '@angular/material/button';
   templateUrl: './historicopedido.component.html',
   styleUrl: './historicopedido.component.scss'
 })
+
 export class HistoricopedidoComponent {
 
   displayedColumns: string[] = ['name', 'quantidade', 'vegetariano', 'datapedido'];
@@ -28,11 +27,4 @@ export class HistoricopedidoComponent {
       this.pedidos = pedidos;
     });
   }
-
-  navigateToHome(): void {
-  
-    this.router.navigate(['/']); 
-  }
-
-
 }

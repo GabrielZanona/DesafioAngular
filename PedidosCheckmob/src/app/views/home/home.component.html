@@ -1,56 +1,55 @@
-<div class="container">
+<div *ngIf="!mostrarhistorico" class="container">
+  <button mat-flat-button color="warn" style="margin-bottom: 15px;" (click)="openDialog(null)">Adicionar item ao
+    pedido</button>
+  <table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
 
-    <button mat-flat-button color="warn" style="margin-bottom: 15px;" (click)="openDialog(null)">Adicionar item ao pedido</button>
-
-<table mat-table #table [dataSource]="dataSource" class="mat-elevation-z8">
-
-    <!--- Note that these columns can be defined in any order.
-          The actual rendered columns are set as a property on the row definition" -->
-  
-    <!-- Position Column -->
     <ng-container matColumnDef="quantidade">
       <th mat-header-cell *matHeaderCellDef> Quantidade </th>
       <td mat-cell *matCellDef="let item"> {{item.quantidade}} </td>
     </ng-container>
-  
-    <!-- Name Column -->
+
     <ng-container matColumnDef="nome">
       <th mat-header-cell *matHeaderCellDef> Nome </th>
       <td mat-cell *matCellDef="let item"> {{item.nome}} </td>
     </ng-container>
-  
-    <!-- Weight Column -->
-    <ng-container matColumnDef="vegetariano">
-        <th mat-header-cell *matHeaderCellDef> Vegetariano </th>
-        <td mat-cell *matCellDef="let item"> {{ item.vegetariano ? 'Sim' : 'Não' }} </td>
-      </ng-container>
-    <!-- Symbol Column -->
-    <ng-container matColumnDef="datapedido">
-        <th mat-header-cell *matHeaderCellDef> Data do pedido </th>
-        <td mat-cell *matCellDef="let item"> {{ formatDate(item.datapedido) }} </td>
-      </ng-container>
 
+    <ng-container matColumnDef="vegetariano">
+      <th mat-header-cell *matHeaderCellDef> Vegetariano </th>
+      <td mat-cell *matCellDef="let item"> {{ item.vegetariano ? 'Sim' : 'Não' }} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="datapedido">
+      <th mat-header-cell *matHeaderCellDef> Data do pedido </th>
+      <td mat-cell *matCellDef="let item"> {{ formatDate(item.datapedido) }} </td>
+    </ng-container>
 
     <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef> Actions </th>
-        <td mat-cell *matCellDef="let item"> 
-        
-            <button mat-icon-button  (click)="editItem(item)">
-                <mat-icon style="color: red;">edit</mat-icon>
-              </button>
-              <button mat-icon-button (click)="deleteItem(item.id)">
-                <mat-icon style="color: red;">delete</mat-icon>
-              </button>
-        
-        </td>
-      </ng-container>
-  
+      <th mat-header-cell *matHeaderCellDef> Actions </th>
+      <td mat-cell *matCellDef="let item">
+        <button mat-icon-button (click)="editItem(item)">
+          <mat-icon style="color: red;">edit</mat-icon>
+        </button>
+        <button mat-icon-button (click)="deleteItem(item.id)">
+          <mat-icon style="color: red;">delete</mat-icon>
+        </button>
+      </td>
+    </ng-container>
+
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 
-  <button mat-flat-button  (click)="moveItemsToPedido()"  color="warn" style="margin-top: 15px; ">Confirmar o pedido</button>
+  <button mat-flat-button class="btn-style" (click)="moveItemsToPedido()" color="warn"
+    style="margin-top: 15px; ">Confirmar o pedido</button>
 
-  <button mat-flat-button   (click)="navigateToHistoricoPedido()" color="warn" style="margin-left: 15px;margin-top: 15px;">Histórico dos Pedidos</button>
-  
- </div>
+  <button mat-flat-button class="btn-style" (click)="navigateToHistoricoPedido()" color="warn"
+    style="margin-left: 15px;margin-top: 15px;">Histórico dos Pedidos</button>
+
+</div>
+
+<div *ngIf="mostrarhistorico" class="container">
+  <button mat-flat-button (click)="navigateToHome()" color="warn" class="btn-style">Criar um novo pedido</button>
+
+  <app-historicopedido></app-historicopedido>
+
+</div>

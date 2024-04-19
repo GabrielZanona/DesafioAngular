@@ -1,7 +1,6 @@
 <div mat-dialog-content>
-
-    <h1 class="titulo"  *ngIf="!isChange"  mat-dialog-title>Adicionar item ao pedido </h1>
-    <h1 class="titulo" *ngIf="isChange"  mat-dialog-title>Editar item</h1>
+    <h1 class="titulo" *ngIf="!isChange" mat-dialog-title>Adicionar item ao pedido </h1>
+    <h1 class="titulo" *ngIf="isChange" mat-dialog-title>Editar item</h1>
     <mat-dialog-content>
         <p>Insira os detalhes do Item </p>
 
@@ -15,7 +14,7 @@
             <input matInput [(ngModel)]="data.nome">
         </mat-form-field>
 
-        <mat-form-field>  
+        <mat-form-field>
             <mat-label>Data do Pedido</mat-label>
             <input matInput [matDatepicker]="picker" [(ngModel)]="data.datapedido">
             <mat-hint>MM/DD/YYYY</mat-hint>
@@ -23,19 +22,19 @@
             <mat-datepicker #picker></mat-datepicker>
         </mat-form-field>
 
-
-     
-        <mat-checkbox class="example-margin" [(ngModel)]="data.vegetariano" 
-            [labelPosition]="'before'" [disabled]="false">
+        <mat-checkbox class="example-margin" [(ngModel)]="data.vegetariano" [labelPosition]="'before'"
+            [disabled]="false">
             <mat-label>Item para Vegetarianos</mat-label>
         </mat-checkbox>
-
 
     </mat-dialog-content>
 
 </div>
+
 <mat-dialog-actions>
+
     <button mat-button (click)="onNoClick()">Cancelar</button>
     <button mat-button *ngIf="!isChange" [mat-dialog-close]="data" cdkFocusInitial>Adicionar</button>
     <button mat-button *ngIf="isChange" [mat-dialog-close]="data" cdkFocusInitial>Editar</button>
+
 </mat-dialog-actions>

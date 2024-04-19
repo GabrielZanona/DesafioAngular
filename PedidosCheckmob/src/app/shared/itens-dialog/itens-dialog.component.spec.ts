@@ -10,8 +10,8 @@ describe('ItensDialogComponent', () => {
     await TestBed.configureTestingModule({
       imports: [ItensDialogComponent]
     })
-    .compileComponents();
-    
+      .compileComponents();
+
     fixture = TestBed.createComponent(ItensDialogComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

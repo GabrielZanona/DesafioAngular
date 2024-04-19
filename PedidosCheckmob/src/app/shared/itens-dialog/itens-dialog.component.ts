@@ -15,20 +15,20 @@ import {
   MatDialogActions,
   MatDialogClose,
 } from '@angular/material/dialog';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {provideNativeDateAdapter} from '@angular/material/core';
-import {MatCheckboxModule} from '@angular/material/checkbox';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { provideNativeDateAdapter } from '@angular/material/core';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 @Component({
   selector: 'app-itens-dialog',
   standalone: true,
-  imports: [MatInputModule, CommonModule, FormsModule, MatFormFieldModule, HomeComponent, FormsModule,MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatDialogContent, MatButtonToggleModule,MatDialogActions,MatDialogClose,MatDatepickerModule,MatCheckboxModule],
+  imports: [MatInputModule, CommonModule, FormsModule, MatFormFieldModule, HomeComponent, FormsModule, MatFormFieldModule, MatInputModule, FormsModule, MatButtonModule, MatDialogContent, MatButtonToggleModule, MatDialogActions, MatDialogClose, MatDatepickerModule, MatCheckboxModule],
   templateUrl: './itens-dialog.component.html',
   providers: [provideNativeDateAdapter()],
   styleUrl: './itens-dialog.component.scss'
@@ -44,22 +44,15 @@ export class ItensDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: ItemRestaurante,
   ) { }
 
-  ngOnInit():void{
-    if (this.data.quantidade !=null){
-      this.isChange=true;
-    }else{
-      this.isChange= false;
+  ngOnInit(): void {
+    if (this.data.quantidade != null) {
+      this.isChange = true;
+    } else {
+      this.isChange = false;
     }
   }
-
-
 
   onNoClick(): void {
     this.dialogRef.close();
   }
-
-
-
-
-
 }
